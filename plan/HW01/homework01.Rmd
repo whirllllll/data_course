@@ -7,16 +7,17 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 library(knitr)
 library(dplyr)
-student<- read.csv("D:/github/data_course/plan/HW01/students.csv", sep= ",")
-student<- as.data.frame(student)
+
 ```
 
 ### 請將students這份資料讀入R當中，資料包含各學院自1945年至2015年的學生人數統計。(讀入後，請用kable函數展示出來)
 
 ```{r ans0}
+
+student<- read.csv("D:/github/data_course/plan/HW01/students.csv", sep= ",")
+student<- as.data.frame(student)
 kable(student, row.names= FALSE, col.names = colnames(student), align= "c")
 ```
 

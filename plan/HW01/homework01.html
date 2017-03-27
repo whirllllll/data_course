@@ -125,7 +125,9 @@ $(document).ready(function () {
 
 <div id="studentsr19452015kable" class="section level3">
 <h3>請將students這份資料讀入R當中，資料包含各學院自1945年至2015年的學生人數統計。(讀入後，請用kable函數展示出來)</h3>
-<pre class="r"><code>kable(student, row.names= FALSE, col.names = colnames(student), align= &quot;c&quot;)</code></pre>
+<pre class="r"><code>student&lt;- read.csv(&quot;D:/github/data_course/plan/HW01/students.csv&quot;, sep= &quot;,&quot;)
+student&lt;- as.data.frame(student)
+kable(student, row.names= FALSE, col.names = colnames(student), align= &quot;c&quot;)</code></pre>
 <table>
 <thead>
 <tr class="header">
